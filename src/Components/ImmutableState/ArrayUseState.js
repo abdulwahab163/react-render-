@@ -9,9 +9,7 @@ function ArrayUseState() {
     //persons.push("ali");
     // setPerson(newPerson);
 
-    const newPersons = {
-      ...persons,
-    };
+    const newPersons = [...persons];
     newPersons.push("talha");
     newPersons.push("shah");
 
