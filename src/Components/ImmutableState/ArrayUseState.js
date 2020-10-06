@@ -6,8 +6,8 @@ function ArrayUseState() {
   const [persons, setPersons] = useState(initState);
 
   const handleChange = () => {
-    //persons.push("ali");
-    // setPerson(newPerson);
+    // persons.push("ali");
+    // setPersons(persons);
 
     const newPersons = [...persons];
     newPersons.push("talha");

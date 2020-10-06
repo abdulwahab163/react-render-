@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
+import Parent from "./Components/ParentChild/Parent";
 //import ObjectUseState from "./Components/ImmutableState/ObjectUseState";
 //import UseState from "./Components/UseState/UseState";
 //import UseReducer from "./Components/UseReducer/UseReducer";
-import ArrayUseState from "./Components/ImmutableState/ArrayUseState";
+//import ArrayUseState from "./Components/ImmutableState/ArrayUseState";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <UseState /> */}
       {/* <UseReducer /> */}
       {/* <ObjectUseState /> */}
-      <ArrayUseState />
+      {/* <ArrayUseState /> */}
+      <Parent></Parent>
     </div>
   );
 }
