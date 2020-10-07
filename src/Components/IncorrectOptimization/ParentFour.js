@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { MemoizedChildFive } from "./ChildFive";
 
 export const ParentFour = () => {
@@ -10,7 +10,11 @@ export const ParentFour = () => {
     lname: "baba",
   };
 
+  const MemoizedPerson = useMemo(() => person, []);
+
   const handleClick = () => {};
+
+  const MemoizedHandleClick = useCallback(handleClick, []);
   console.log("ParentFour Render!");
   return (
     <div>
@@ -18,8 +22,10 @@ export const ParentFour = () => {
       <button onClick={() => setName("rachordaas")}>Change name</button>
       <MemoizedChildFive
         name={name}
-        person={person}
-        handleClick={handleClick}
+        // person={person} causes rerender because of new reference everytime
+        person={MemoizedPerson}
+        // handleClick={handleClick} causes rerender because of new reference everytime
+        handleClick={MemoizedHandleClick}
       />
     </div>
   );
